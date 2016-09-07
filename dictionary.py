@@ -1,14 +1,17 @@
 import random
+# import requests
+import os
 
 # TODO: Make this part faster? Takes a couple seconds.
 
 
 def GetStarterWords(numberOfWords):
 
-    # Open the built-in Mac dictionary file twice. I assume this isn't necessary.
+    # Open the dictionary file twice. I assume this isn't necessary.
     # TODO: Find a way to only open the dictionary file once.
-    dictFile = open('/usr/share/dict/words', 'r')
-    dictFile2 = open('/usr/share/dict/words', 'r')
+    cwd = os.getcwd()
+    dictFile = open(cwd + "/words", 'r')
+    dictFile2 = open(cwd + "/words", 'r')
 
     # Two empty lists - one for the output list of starter words, and one for the
     # random line numbers to take from the dictionary file.
@@ -30,9 +33,13 @@ def GetStarterWords(numberOfWords):
     # TODO: Find a way to further limit weird words.
     for line in range(lineCount):
         word = dictFile2.readline()
+        word = word.strip('\n')
         if line in lineNumbers:
-            if len(word) < 7:
+            if len(word) < 5:
                 starterWords.append(word)
+                lineNumbers.remove(line)
+                if len(lineNumbers) == 0:
+                    break
             else:
                 lineNumbers.remove(line)
                 lineNumbers.append(line + 1)
@@ -49,3 +56,18 @@ def GetStarterWords(numberOfWords):
     return starterWords
 
 
+# def CheckFrequency(word):
+#     headers = {"X-Mashape-Key": ""}
+#     url = "https://wordsapiv1.p.mashape.com/words/" + word
+#
+#     response = requests.get(url, headers=headers)
+#
+#     response = response.json()
+#
+#     if "frequency" in response.keys():
+#         frequency = response['frequency']
+#
+#     else:
+#         frequency = 0
+#
+#     return frequency

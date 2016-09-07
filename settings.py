@@ -10,3 +10,8 @@ def setNumOfStarterWords():
 def setNumOfLines():
     numOfLines = int(input("How many lines will you write? "))
     return numOfLines
+
+
+def setNumOfSyllables():
+    numOfSyllables = int(input("How many syllables in each line? "))
+    return numOfSyllables
