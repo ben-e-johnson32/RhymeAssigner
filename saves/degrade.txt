@@ -1,0 +1,10 @@
+Title: degrade
+
+degrade
+
+Rhyme score: 228
+Syllable Score: 100
+Total Score: 328
+Starter words: aged
+Target number of syllables: 2
+09/14/16 05:52:07 PM

@@ -15,6 +15,7 @@ import files
 def main():
     # The menu for the program. The whole program is in a while loop that only breaks when the user enters
     # 'x' when given the option.
+    # TODO: Add option to view high scores.
     choices = "Enter 'w' to write, 'r' to read a previous entry, 'd' to delete a previous entry, or 'x' to quit: "
     x = 0
     while True:
@@ -33,9 +34,10 @@ def main():
             numOfStarterWords = settings.setNumOfStarterWords()
             numOfLines = settings.setNumOfLines()
             numOfSyllables = settings.setNumOfSyllables()
-            starterWords = dictionary.GetStarterWords(numOfStarterWords)
+            starterWords = dictionary.GetWords(numOfStarterWords)
 
-            possibleRhymes = {}         # Initialize a dictionary for all the possible rhymes and their scores.
+            # Initialize a dictionary for all the possible rhymes and their scores.
+            possibleRhymes = {}
 
             # Fill the dictionary of possible rhymes.
             possibleRhymes = GetPossibleRhymes(numOfStarterWords, possibleRhymes, starterWords)
@@ -49,57 +51,42 @@ def main():
 
             # Score the line and return the results as a string.
             scoreOutput = scoring.GetScore(userLines, possibleRhymes, numOfSyllables)
-            print(scoreOutput)
+            print(scoreOutput[0])
 
-            # Ask the user if they want to save their entry, or just go back to the menu.
-            keepGoing = input("Enter 's' to save this entry, or 'm' to go back to the main menu: ")
+            if "High score!" in scoreOutput[0]:
+                scoreOutput[0] = scoreOutput[0][12:]
+                filename = input("Enter a file name to save this high score: ")
+                files.Save(userLines, scoreOutput[0], filename, fileDict, starterWords, numOfSyllables)
+                files.UpdateHighScores(filename, scoreOutput[1])
 
-            # Save the file.
-            if keepGoing == 's':
-                fileName = input("Enter a file name: ")
-                files.Save(userLines, scoreOutput, fileName, fileDict)
-
-            # If they don't want to save, go back to the top of the loop.
             else:
-                continue
+                # Ask the user if they want to save their entry, or just go back to the menu.
+                keepGoing = input("Enter 's' to save this entry, or 'm' to go back to the main menu: ").lower()
+
+                # Save the file.
+                if keepGoing == 's':
+                    filename = input("Enter a file name: ")
+                    files.Save(userLines, scoreOutput[0], filename, fileDict, starterWords, numOfSyllables)
+
+                # If they don't want to save, go back to the top of the loop.
+                else:
+                    x += 1
+                    continue
 
         # The user enters r, choosing read mode.
         elif mainMenuChoice == 'r':
             print("Choose a file: ")
 
-            # Display a list of the saved files by looping through the dictionary of files.
-            x = 0
-            while x < len(fileDict):
-                print(str(x + 1) + ". " + fileDict[x])
-                x += 1
+            # Get the filename from ChooseFile then read the file.
+            filename = files.ChooseFile(fileDict)
+            files.Read(filename)
 
-            # The user enters either the number or filename.
-            choice = input("Enter the number or the filename: ")
-            # Some simple checking to see if the user entered the number or filename. Set a flag.
-            try:
-                choiceIsInt = True
-                choice = int(choice) - 1
-            except TypeError:
-                choiceIsInt = False
-
-            # If the choice is either a key (integer file index) or value (string filename),
-            # read the file.
-            if choice in list(fileDict.keys()) or choice in list(fileDict.values()):
-                if choiceIsInt:
-                    filename = fileDict[choice]
-                else:
-                    filename = choice
-                print()
-                files.Read(filename)
-
-        # TODO: An option to delete previous entries.
+        # User enters d, choosing delete mode.
         elif mainMenuChoice == 'd':
             print("Choose a file to delete: ")
 
-            x = 0
-            while x < len(fileDict):
-                print(str(x + 1) + ". " + fileDict[x])
-                x += 1
+            filename = files.ChooseFile(fileDict)
+            files.Delete(filename)
 
         # Entering 'x' when prompted will break the loop, thus ending the program.
         elif mainMenuChoice == 'x':

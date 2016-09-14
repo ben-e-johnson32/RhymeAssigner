@@ -1,0 +1,11 @@
+Title: coma induction
+
+Anesthetizes
+coma induction
+
+Rhyme score: 600
+Syllable Score: 200
+Total Score: 800
+Starter words: analyzes, soma
+Target number of syllables: 5
+09/14/16 05:38:47 PM

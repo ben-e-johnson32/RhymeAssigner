@@ -1,73 +1,35 @@
 import random
-# import requests
-import os
-
-# TODO: Make this part faster? Takes a couple seconds.
+import sqlite3 as lite
 
 
-def GetStarterWords(numberOfWords):
+def GetWords(numberOfWords):
+    # Connect to the database, create a cursor.
+    connection = lite.connect("words2.db")
+    cursor = connection.cursor()
 
-    # Open the dictionary file twice. I assume this isn't necessary.
-    # TODO: Find a way to only open the dictionary file once.
-    cwd = os.getcwd()
-    dictFile = open(cwd + "/words", 'r')
-    dictFile2 = open(cwd + "/words", 'r')
+    # Execute a statement to find the highest ID in the database,
+    # which would also be the row count + 1.
+    cursor.execute("SELECT max(id) FROM WORDS")
+    rowCount = cursor.fetchone()[0] - 1
 
-    # Two empty lists - one for the output list of starter words, and one for the
-    # random line numbers to take from the dictionary file.
-    starterWords = []
+    # Two empty lists, one for the output words, one for the random line numbers.
+    words = []
     lineNumbers = []
 
-    # Find the number of lines in the file.
-    # TODO: Hard-code this to avoid looping through hundreds of thousands of lines twice?
-    lineCount = len(dictFile.readlines())
-
-    # Fill the list of random line numbers to take from the file.
+    # Generate some random numbers in the range of the number of rows in the database.
     for x in range(numberOfWords):
-        lineNumbers.append(random.randint(0, lineCount))
+        lineNumbers.append(random.randint(0, rowCount))
+    # For each of those numbers we generated, grab that word from the database and add it to output.
+    for num in lineNumbers:
+        cursor.execute("SELECT word FROM WORDS WHERE id={id}".format(id=num))
+        words.append(cursor.fetchone()[0])
 
-    # Loop through the file - if the line number is in the lineNumbers list,
-    # and the word is relatively short (makes for better rhyme results and fewer
-    # strange, rarely-used words), add it to the starterWords list. If the word is
-    # too long, keep checking the next line until you find one short enough.
-    # TODO: Find a way to further limit weird words.
-    for line in range(lineCount):
-        word = dictFile2.readline()
-        word = word.strip('\n')
-        if line in lineNumbers:
-            if len(word) < 5:
-                starterWords.append(word)
-                lineNumbers.remove(line)
-                if len(lineNumbers) == 0:
-                    break
-            else:
-                lineNumbers.remove(line)
-                lineNumbers.append(line + 1)
+    # A while loop to strip off the newline characters.
+    x = 0
+    while x < len(words):
+        words[x] = words[x].strip('\n')
+        x += 1
 
-    # While loop with a counter that strips the newline from each word.
-    b = 0
-    while b < len(starterWords):
-        starterWords[b] = starterWords[b].strip('\n')
-        b += 1
-
-    # Close the files and return the list of starter words.
-    dictFile.close()
-    dictFile2.close()
-    return starterWords
-
-
-# def CheckFrequency(word):
-#     headers = {"X-Mashape-Key": ""}
-#     url = "https://wordsapiv1.p.mashape.com/words/" + word
-#
-#     response = requests.get(url, headers=headers)
-#
-#     response = response.json()
-#
-#     if "frequency" in response.keys():
-#         frequency = response['frequency']
-#
-#     else:
-#         frequency = 0
-#
-#     return frequency
+    # Close the connection to the database and return the list of words.
+    connection.close()
+    return words

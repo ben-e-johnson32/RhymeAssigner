@@ -1,10 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b9d7a342-11a1-4db7-93ef-ca8a5c33935e" name="Default" comment="Added syllable counting and file management.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saves/borderline.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saves/oilmen conmen.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/words" />
+    <list default="true" id="b9d7a342-11a1-4db7-93ef-ca8a5c33935e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/syllables.db" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/words.db" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/words2.db" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saves/august harvest.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saves/barracuda documentary.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saves/ceremony.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saves/cilantro arrow.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saves/coma induction.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saves/conjures racegoers.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/create_syllables_db.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/create_words_db.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saves/degrade.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/google-10000-english-usa.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/high_scores.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saves/infect subject.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saves/jobs.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saves/jungle puddle.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saves/macrocosm.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saves/monographs pass.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saves/overcareful scribe.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saves/sourly tea.txt" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/saves/borderline.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/saves/oilmen conmen.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/words" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dictionary.py" afterPath="$PROJECT_DIR$/dictionary.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files.py" afterPath="$PROJECT_DIR$/files.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scoring.py" afterPath="$PROJECT_DIR$/scoring.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.py" afterPath="$PROJECT_DIR$/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RhymingLineFinder.iws" />
@@ -19,9 +45,12 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/RhymeAssigner$create_words_db.coverage" NAME="create_words_db Coverage Results" MODIFIED="1473811741285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RhymeAssigner$dictionary__1_.coverage" NAME="dictionary (1) Coverage Results" MODIFIED="1473036154625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RhymeAssigner$create_syllables_db.coverage" NAME="create_syllables_db Coverage Results" MODIFIED="1473826570452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RhymeAssigner$settings.coverage" NAME="settings Coverage Results" MODIFIED="1473819297762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RhymingLineFinder$main.coverage" NAME="main Coverage Results" MODIFIED="1472671140688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/RhymeAssigner$main.coverage" NAME="main Coverage Results" MODIFIED="1473289982171" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RhymeAssigner$main.coverage" NAME="main Coverage Results" MODIFIED="1473896299880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RhymingLineFinder$dictionary.coverage" NAME="dictionary Coverage Results" MODIFIED="1472601351621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../RhymingLineFinder" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -42,8 +71,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-67.18519">
-              <caret line="133" column="13" selection-start-line="133" selection-start-column="13" selection-end-line="133" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -51,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="files.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="files.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/files.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37354988">
-              <caret line="88" column="71" selection-start-line="88" selection-start-column="71" selection-end-line="88" selection-end-column="71" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="174" column="43" selection-start-line="174" selection-start-column="43" selection-end-line="174" selection-end-column="43" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -67,8 +96,11 @@
         <entry file="file://$PROJECT_DIR$/scoring.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="64" column="27" selection-start-line="64" selection-start-column="27" selection-end-line="64" selection-end-column="27" />
-              <folding />
+              <caret line="114" column="22" selection-start-line="114" selection-start-column="22" selection-end-line="114" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+                <marker date="1473896299000" expanded="true" signature="2475:2519" placeholder="SELECT sylla..syllables..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -77,18 +109,65 @@
         <entry file="file://$PROJECT_DIR$/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <caret line="0" column="72" selection-start-line="0" selection-start-column="72" selection-end-line="0" selection-end-column="72" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dictionary.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dictionary.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dictionary.py">
           <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.2536023">
+              <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+                <marker date="1473823521000" expanded="true" signature="324:349" placeholder="SELECT max(i..WORDS..." />
+                <marker date="1473823521000" expanded="true" signature="843:879" placeholder="SELECT word ..WORDS..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create_words_db.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/create_words_db.py">
+          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-              <folding />
+              <caret line="76" column="51" selection-start-line="76" selection-start-column="51" selection-end-line="76" selection-end-column="51" />
+              <folding>
+                <element signature="e#0#22#0" expanded="true" />
+                <marker date="1473812700000" expanded="true" signature="442:458" placeholder="DROP TABLE W..." />
+                <marker date="1473812700000" expanded="true" signature="483:525" placeholder="CREATE TABLE..WORDS..." />
+                <marker date="1473812700000" expanded="true" signature="483:531" placeholder="CREATE TABLE..WORDSID..." />
+                <marker date="1473812700000" expanded="true" signature="483:536" placeholder="CREATE TABLE..WORDS..." />
+                <marker date="1473812700000" expanded="true" signature="483:540" placeholder="CREATE TABLE..WORDS..." />
+                <marker date="1473812700000" expanded="true" signature="483:558" placeholder="CREATE TABLE..WORDS..." />
+                <marker date="1473812700000" expanded="true" signature="991:1021" placeholder="INSERT INTO ..." />
+                <marker date="1473812700000" expanded="true" signature="991:1024" placeholder="INSERT INTO ..." />
+                <marker date="1473812700000" expanded="true" signature="1228:1254" placeholder="select * fro..WORDS..." />
+                <marker date="1473812700000" expanded="true" signature="1561:1601" placeholder="DELETE FROM ..." />
+                <marker date="1473812700000" expanded="true" signature="2176:2192" placeholder="DROP TABLE W..." />
+                <marker date="1473812700000" expanded="true" signature="2211:2264" placeholder="CREATE TABLE..WORDS..." />
+                <marker date="1473812700000" expanded="true" signature="2335:2357" placeholder="SELECT word ..WORDS..." />
+                <marker date="1473812700000" expanded="true" signature="2585:2608" placeholder="INSERT INTO ..." />
+                <marker date="1473812700000" expanded="true" signature="2585:2618" placeholder="INSERT INTO ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create_syllables_db.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/create_syllables_db.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+                <marker date="1473830032000" expanded="true" signature="349:455" placeholder="CREATE TABLE..syllables..." />
+                <marker date="1473830032000" expanded="true" signature="1262:1313" placeholder="INSERT INTO ..." />
+                <marker date="1473830032000" expanded="true" signature="1566:1603" placeholder="SELECT word,..syllables..." />
+                <marker date="1473830032000" expanded="true" signature="1566:1616" placeholder="SELECT word,..syllables..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -112,12 +191,16 @@
         <option value="$PROJECT_DIR$/../RhymingLineFinder/settings.py" />
         <option value="$PROJECT_DIR$/../RhymingLineFinder/dictionary.py" />
         <option value="$PROJECT_DIR$/../RhymingLineFinder/main.py" />
-        <option value="$PROJECT_DIR$/settings.py" />
         <option value="$PROJECT_DIR$/saves/a" />
-        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/create_words_db.py" />
         <option value="$PROJECT_DIR$/dictionary.py" />
-        <option value="$PROJECT_DIR$/scoring.py" />
+        <option value="$PROJECT_DIR$/high_scores" />
+        <option value="$PROJECT_DIR$/create_syllables_db.py" />
+        <option value="$PROJECT_DIR$/settings.py" />
+        <option value="$PROJECT_DIR$/high_scores.txt" />
         <option value="$PROJECT_DIR$/files.py" />
+        <option value="$PROJECT_DIR$/scoring.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -175,6 +258,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -193,24 +278,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RhymeAssigner" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RhymeAssigner" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="saves" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -218,28 +287,10 @@
     <property name="recentsLimit" value="5" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="/usr/bin/python" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager" selected="Python.main">
-    <configuration default="false" name="dictionary" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../RhymingLineFinder" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="RhymingLineFinder" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../RhymingLineFinder/dictionary.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -272,6 +323,60 @@
       <module name="RhymeAssigner" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dictionary.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="create_words_db" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="RhymeAssigner" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/create_words_db.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="settings" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="RhymeAssigner" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/settings.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="create_syllables_db" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="RhymeAssigner" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/create_syllables_db.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -464,16 +569,20 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Python.dictionary" />
-      <item index="1" class="java.lang.String" itemvalue="Python.main" />
-      <item index="2" class="java.lang.String" itemvalue="Python.dictionary (1)" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Python.main" />
+      <item index="1" class="java.lang.String" itemvalue="Python.dictionary (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Python.create_words_db" />
+      <item index="3" class="java.lang.String" itemvalue="Python.settings" />
+      <item index="4" class="java.lang.String" itemvalue="Python.create_syllables_db" />
     </list>
     <recent_temporary>
-      <list size="3">
+      <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.main" />
-        <item index="1" class="java.lang.String" itemvalue="Python.dictionary (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.dictionary" />
+        <item index="1" class="java.lang.String" itemvalue="Python.create_syllables_db" />
+        <item index="2" class="java.lang.String" itemvalue="Python.settings" />
+        <item index="3" class="java.lang.String" itemvalue="Python.create_words_db" />
+        <item index="4" class="java.lang.String" itemvalue="Python.dictionary (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -494,7 +603,13 @@
       <option name="project" value="LOCAL" />
       <updated>1473290270409</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added words file and two example saved files to git.">
+      <created>1473290476891</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1473290476891</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -504,23 +619,23 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30917874" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25281805" sideWeight="0.88045233" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.489533" sideWeight="0.88045233" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4057971" sideWeight="0.11954766" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20355412" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20678514" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33333334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26086956" sideWeight="0.49353796" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39613527" sideWeight="0.49353796" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -537,7 +652,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Added syllable counting and file management." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added syllable counting and file management." />
+    <MESSAGE value="Added words file and two example saved files to git." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added words file and two example saved files to git." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -551,11 +667,62 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="25" />
+      <option name="time" value="40" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="70" column="29" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/files.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scoring.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="101" column="18" selection-start-line="101" selection-start-column="18" selection-end-line="101" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1473896299000" expanded="true" signature="2475:2519" placeholder="SELECT sylla..syllables..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dictionary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="98" selection-start-line="30" selection-start-column="98" selection-end-line="30" selection-end-column="98" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1473823521000" expanded="true" signature="324:349" placeholder="SELECT max(i..WORDS..." />
+            <marker date="1473823521000" expanded="true" signature="843:879" placeholder="SELECT word ..WORDS..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -578,7 +745,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-          <folding />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1473823521000" expanded="true" signature="324:349" placeholder="SELECT max(i..WORDS..." />
+            <marker date="1473823521000" expanded="true" signature="843:879" placeholder="SELECT word ..WORDS..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -592,7 +763,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/words">
+    <entry file="file://$PROJECT_DIR$/saves/sourly tea.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saves/barracuda documentary.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saves/infect subject.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saves/august harvest.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saves/jungle puddle.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -602,68 +805,106 @@
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.7122905">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scoring.py">
+    <entry file="file://$PROJECT_DIR$/high_scores.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="64" column="27" selection-start-line="64" selection-start-column="27" selection-end-line="64" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.43227667">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/settings.py">
+    <entry file="file://$PROJECT_DIR$/create_words_db.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
+          <caret line="76" column="51" selection-start-line="76" selection-start-column="51" selection-end-line="76" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+            <marker date="1473812700000" expanded="true" signature="442:458" placeholder="DROP TABLE W..." />
+            <marker date="1473812700000" expanded="true" signature="483:525" placeholder="CREATE TABLE..WORDS..." />
+            <marker date="1473812700000" expanded="true" signature="483:531" placeholder="CREATE TABLE..WORDSID..." />
+            <marker date="1473812700000" expanded="true" signature="483:536" placeholder="CREATE TABLE..WORDS..." />
+            <marker date="1473812700000" expanded="true" signature="483:540" placeholder="CREATE TABLE..WORDS..." />
+            <marker date="1473812700000" expanded="true" signature="483:558" placeholder="CREATE TABLE..WORDS..." />
+            <marker date="1473812700000" expanded="true" signature="991:1021" placeholder="INSERT INTO ..." />
+            <marker date="1473812700000" expanded="true" signature="991:1024" placeholder="INSERT INTO ..." />
+            <marker date="1473812700000" expanded="true" signature="1228:1254" placeholder="select * fro..WORDS..." />
+            <marker date="1473812700000" expanded="true" signature="1561:1601" placeholder="DELETE FROM ..." />
+            <marker date="1473812700000" expanded="true" signature="2176:2192" placeholder="DROP TABLE W..." />
+            <marker date="1473812700000" expanded="true" signature="2211:2264" placeholder="CREATE TABLE..WORDS..." />
+            <marker date="1473812700000" expanded="true" signature="2335:2357" placeholder="SELECT word ..WORDS..." />
+            <marker date="1473812700000" expanded="true" signature="2585:2608" placeholder="INSERT INTO ..." />
+            <marker date="1473812700000" expanded="true" signature="2585:2618" placeholder="INSERT INTO ..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dictionary.py">
+    <entry file="file://$PROJECT_DIR$/create_syllables_db.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-          <folding />
+          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+            <marker date="1473830032000" expanded="true" signature="349:455" placeholder="CREATE TABLE..syllables..." />
+            <marker date="1473830032000" expanded="true" signature="1262:1313" placeholder="INSERT INTO ..." />
+            <marker date="1473830032000" expanded="true" signature="1566:1603" placeholder="SELECT word,..syllables..." />
+            <marker date="1473830032000" expanded="true" signature="1566:1616" placeholder="SELECT word,..syllables..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-67.18519">
-          <caret line="133" column="13" selection-start-line="133" selection-start-column="13" selection-end-line="133" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/saves/borderline.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/saves/oilmen conmen.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/files.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37354988">
-          <caret line="88" column="71" selection-start-line="88" selection-start-column="71" selection-end-line="88" selection-end-column="71" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="174" column="43" selection-start-line="174" selection-start-column="43" selection-end-line="174" selection-end-column="43" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scoring.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="114" column="22" selection-start-line="114" selection-start-column="22" selection-end-line="114" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1473896299000" expanded="true" signature="2475:2519" placeholder="SELECT sylla..syllables..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="72" selection-start-line="0" selection-start-column="72" selection-end-line="0" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dictionary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.2536023">
+          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1473823521000" expanded="true" signature="324:349" placeholder="SELECT max(i..WORDS..." />
+            <marker date="1473823521000" expanded="true" signature="843:879" placeholder="SELECT word ..WORDS..." />
           </folding>
         </state>
       </provider>
