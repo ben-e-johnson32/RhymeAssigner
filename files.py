@@ -48,7 +48,12 @@ def Read(filename):
 
     # Get the path to the saved files directory and open the file.
     cwd = os.getcwd() + "/saves/"
-    file = open(cwd + filename + ".txt", 'r')
+
+    try:
+        file = open(cwd + filename + ".txt", 'r')
+    except TypeError:
+        print(filename + ".txt not found.")
+        return
 
     # Read the file into a list of its lines and initialize an empty string for output.
     lineList = file.readlines()
@@ -57,7 +62,7 @@ def Read(filename):
     # Loop through the list of lines and add each to the output string, then print the string and close the file.
     for line in lineList:
         output += line
-    print(output + "\n")
+    print("\n" + output + "\n")
     file.close()
 
 
@@ -123,6 +128,9 @@ def Delete(filename):
 
 
 def UpdateHighScores(filename, score):
+    if filename == 0:
+        filename = "x"
+        score = "0"
     cwd = os.getcwd()
     file = open(cwd + "/high_scores.txt", "r")
     lines = file.readlines()

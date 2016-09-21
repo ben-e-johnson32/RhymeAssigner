@@ -23,7 +23,7 @@ def FillTable():
     d = cmudict.dict()
     newD = {}
 
-    # Read from the cmudict, take the word and syllable count. Expression for counting syllables (line 30) found here:
+    # Read from the cmudict, take the word and syllable count. Expression for counting syllables (line 29) found here:
     # http://stackoverflow.com/questions/5513391/code-for-counting-the-number-of-syllables-in-the-words-in-a-file
     for key in d.keys():
         syllables = max([len(list(y for y in x if isdigit(y[-1]))) for x in d[key.lower()]])

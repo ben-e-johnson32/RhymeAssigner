@@ -2,8 +2,6 @@ import string
 import sqlite3 as lite
 import os
 
-# TODO: Write a high scores file.
-
 
 def GetScore(userLines, possibleRhymes, numOfSyllables):
     rhymeScore = 0
@@ -117,6 +115,7 @@ def GetLowHighScore():
     cwd = os.getcwd()
     file = open(cwd + "/high_scores.txt", "r")
     lines = file.readlines()
+    file.close()
 
     # If there aren't 10 high scores yet, return 0.
     if len(lines) < 20:
@@ -125,3 +124,70 @@ def GetLowHighScore():
     # The lowest score on the list will be the last line of the file.
     lowHighScore = int(lines[len(lines) - 1].rstrip("\n"))
     return lowHighScore
+
+
+def DisplayHighScores(fileDict):
+    # Open the high scores file and read its lines into a list.
+    cwd = os.getcwd()
+    file = open(cwd + "/high_scores.txt", "r")
+    lines = file.readlines()
+    file.close()
+    highScoresDict = {}
+
+    # A loop with 2 counters. Fills the high scores dictionary from the lines of the file.
+    y = 0
+    x = 0
+    while x < len(lines):
+        filename = lines[x][:-1]
+        score = lines[x + 1].rstrip("\n")
+        entry = {y: [filename, score]}
+        highScoresDict.update(entry)
+        x += 2
+        y += 1
+
+    # A loop that prints the titles and scores of all high score entries in a numbered list.
+    x = 0
+    while x < len(highScoresDict):
+        print(str(x + 1) + ". " + highScoresDict[x][0] + " - " + highScoresDict[x][1])
+        x += 1
+
+    # Have the user enter either the filename or the number on the list.
+    choice = input("Enter the number or the filename: ")
+
+    # Figure out whether they chose the number or the string, set a flag.
+    try:
+        choiceIsInt = True
+        choice = int(choice) - 1
+    except TypeError:
+        choiceIsInt = False
+    except ValueError:
+        choiceIsInt = False
+
+    # If the choice is a key in the high scores dictionary or a value in the file dictionary,
+    # set the filename. If we know it to be an int, set it based on the high scores dictionary.
+    # Otherwise it's a string - the filename itself.
+    filename = ""
+    if choice in highScoresDict.keys() or choice in GetHighScoreFilenames():
+        if choiceIsInt:
+            filename = highScoresDict[choice][0]
+        else:
+            filename = choice
+
+    return filename
+
+
+def GetHighScoreFilenames():
+
+    cwd = os.getcwd()
+    file = open(cwd + "/high_scores.txt", "r")
+    lines = file.readlines()
+    file.close()
+    highScoreFilenames = []
+
+    x = 0
+    while x < len(lines):
+        if x % 2 == 0:
+            highScoreFilenames.append(lines[x][:-1])
+        x += 2
+
+    return highScoreFilenames

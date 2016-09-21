@@ -16,7 +16,8 @@ def main():
     # The menu for the program. The whole program is in a while loop that only breaks when the user enters
     # 'x' when given the option.
     # TODO: Add option to view high scores.
-    choices = "Enter 'w' to write, 'r' to read a previous entry, 'd' to delete a previous entry, or 'x' to quit: "
+    choices = "Enter 'w' to write, 'r' to read a previous entry, 'd' to delete a previous entry, 'h' to view high " \
+              "scores, or 'x' to quit: "
     x = 0
     while True:
         # Get a dictionary of the saved files. They have an integer as the key and the filename as the value.
@@ -42,9 +43,13 @@ def main():
             # Fill the dictionary of possible rhymes.
             possibleRhymes = GetPossibleRhymes(numOfStarterWords, possibleRhymes, starterWords)
 
-            # Display the starter words and all the possible rhymes to make sure it's working. (just for testing)
-            print(starterWords)
-            print(possibleRhymes)
+            # Display the starter words
+            starterWordsString = ""
+            for word in starterWords:
+                starterWordsString += word + ", "
+            print("Starter words: " + starterWordsString.rstrip(", "))
+            # Displays possible rhymes for testing
+            # print(possibleRhymes)
 
             # The user enters their lines.
             userLines = GetLines(numOfLines)
@@ -60,18 +65,20 @@ def main():
                 files.UpdateHighScores(filename, scoreOutput[1])
 
             else:
-                # Ask the user if they want to save their entry, or just go back to the menu.
-                keepGoing = input("Enter 's' to save this entry, or 'm' to go back to the main menu: ").lower()
+                while True:
+                    # Ask the user if they want to save their entry, or just go back to the menu.
+                    keepGoing = input("Enter 's' to save this entry, or 'm' to go back to the main menu: ").lower()
 
-                # Save the file.
-                if keepGoing == 's':
-                    filename = input("Enter a file name: ")
-                    files.Save(userLines, scoreOutput[0], filename, fileDict, starterWords, numOfSyllables)
+                    # Save the file.
+                    if keepGoing == 's':
+                        filename = input("Enter a file name: ")
+                        files.Save(userLines, scoreOutput[0], filename, fileDict, starterWords, numOfSyllables)
+                        break
 
-                # If they don't want to save, go back to the top of the loop.
-                else:
-                    x += 1
-                    continue
+                    # If they don't want to save, go back to the top of the loop.
+                    elif keepGoing == 'm':
+                        x += 1
+                        break
 
         # The user enters r, choosing read mode.
         elif mainMenuChoice == 'r':
@@ -79,14 +86,36 @@ def main():
 
             # Get the filename from ChooseFile then read the file.
             filename = files.ChooseFile(fileDict)
-            files.Read(filename)
+
+            if filename:
+                files.Read(filename)
+            else:
+                print("File not found.")
 
         # User enters d, choosing delete mode.
         elif mainMenuChoice == 'd':
             print("Choose a file to delete: ")
 
             filename = files.ChooseFile(fileDict)
-            files.Delete(filename)
+
+            if filename:
+                if filename not in scoring.GetHighScoreFilenames():
+                    files.Delete(filename)
+                else:
+                    print(filename + " can't be deleted. It is a high score entry.")
+            else:
+                print("File not found.")
+
+        elif mainMenuChoice == 'h':
+            while True:
+                print("Choose a high score file to view: ")
+                filename = scoring.DisplayHighScores(fileDict)
+
+                if filename != "":
+                    files.Read(filename)
+                    break
+                else:
+                    print("File not found. Please try again.")
 
         # Entering 'x' when prompted will break the loop, thus ending the program.
         elif mainMenuChoice == 'x':
