@@ -1,0 +1,12 @@
+Title: numbers
+
+123 345 322
+1
+20
+
+Rhyme score: 0
+Syllable Score: 125
+Total Score: 125
+Starter words: each, cage
+Target number of syllables: 4
+09/20/16 05:26:02 PM
