@@ -178,12 +178,14 @@ def DisplayHighScores(fileDict):
 
 def GetHighScoreFilenames():
 
+    # Open the high scores file and read its lines into an list.
     cwd = os.getcwd()
     file = open(cwd + "/high_scores.txt", "r")
     lines = file.readlines()
     file.close()
     highScoreFilenames = []
 
+    # Loop through the list of lines and grab the filenames (every other line starting with the first).
     x = 0
     while x < len(lines):
         if x % 2 == 0:

@@ -15,7 +15,6 @@ import files
 def main():
     # The menu for the program. The whole program is in a while loop that only breaks when the user enters
     # 'x' when given the option.
-    # TODO: Add option to view high scores.
     choices = "Enter 'w' to write, 'r' to read a previous entry, 'd' to delete a previous entry, 'h' to view high " \
               "scores, or 'x' to quit: "
     x = 0
